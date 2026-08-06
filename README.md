@@ -1,5 +1,13 @@
 # de_project
 DP-750
+
+
+
+<details>
+
+
+    
+
 <img width="1361" height="545" alt="image" src="https://github.com/user-attachments/assets/0befb2f6-8e80-4654-914d-a77d75782134" />
 
 <img width="609" height="617" alt="image" src="https://github.com/user-attachments/assets/f5464fac-a868-4563-9f4a-4ec7ad4bebfd" />
@@ -8,6 +16,10 @@ DP-750
 <img width="1043" height="593" alt="image" src="https://github.com/user-attachments/assets/616ab8c2-6a18-408c-a2ac-a18fee7f4441" />
 <img width="1340" height="594" alt="image" src="https://github.com/user-attachments/assets/6ef4380b-f648-4c37-b292-7c3c6e40b81a" />
 <img width="1358" height="444" alt="image" src="https://github.com/user-attachments/assets/dc069395-2047-4085-a81d-2aa326313383" />
+
+
+<details>
+  
 
 --
 - from account console - Set UP - user management - with admin account
@@ -27,8 +39,19 @@ DP-750
 <img width="1304" height="520" alt="image" src="https://github.com/user-attachments/assets/4389d7f1-1825-4209-907c-da62aba9abd8" />
 <img width="1324" height="542" alt="image" src="https://github.com/user-attachments/assets/9de0b1e1-a423-48f3-906c-ee22c4aeced1" />
 
+</details>
 
 
+# Compute
+
+
+
+# 
+
+
+
+
+</details>
 
 
 
