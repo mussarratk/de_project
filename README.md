@@ -1,12 +1,39 @@
 # de_project
-DP-750
+## DP-750
+---
 
+<details>
+    
+
+# RIDESHARE PROJECT - 
+
+- Ingestion Design
+- Bronze Layer - PySpark - All Table
+- Silver Layer - LDP - Lakeflow Declarative Pipeline - Trips Table
+- Gold Layer - OBT append - LDP  - Trips Table for joins add from dimension table
+- Star Schema - Dimensional Data Model - All facts and dims
+  
+
+
+
+
+
+
+
+
+
+
+
+</details>
+
+
+---
 
 
 <details>
 
 
-    
+## AZURE SETUP
 
 <img width="1361" height="545" alt="image" src="https://github.com/user-attachments/assets/0befb2f6-8e80-4654-914d-a77d75782134" />
 
@@ -21,7 +48,10 @@ DP-750
 <details>
   
 
---
+----
+
+## DATABRICKS SETUP
+
 - from account console - Set UP - user management - with admin account
 
   <img width="1355" height="599" alt="image" src="https://github.com/user-attachments/assets/e987f0dc-7aff-4f54-a96a-7e17f1f397a3" />
