@@ -12,7 +12,26 @@
 - Silver Layer - LDP - Lakeflow Declarative Pipeline - Trips Table
 - Gold Layer - OBT append - LDP  - Trips Table for joins add from dimension table
 - Star Schema - Dimensional Data Model - All facts and dims
+
+# Project
   
+<img width="562" height="577" alt="image" src="https://github.com/user-attachments/assets/d18dc42e-9b10-44a6-b621-882d89844b94" />
+
+<img width="1156" height="434" alt="image" src="https://github.com/user-attachments/assets/60e0c00c-afcc-4a09-8531-f45e0f181a11" />
+
+- External Location to save the table
+
+<img width="1309" height="431" alt="image" src="https://github.com/user-attachments/assets/2055df33-74ae-4590-9cb0-eb8418898baa" />
+<img width="1342" height="421" alt="image" src="https://github.com/user-attachments/assets/1a18d510-1817-4364-894d-b8f80196b4e1" />
+
+
+## Pipeline - LDP - Fully Managed by Databricks
+- Use Autoloader - drag
+- No Need Checkpoint Location and Schema Location - Auto done
+
+<img width="1325" height="517" alt="image" src="https://github.com/user-attachments/assets/cf9327f4-61d7-4546-ba78-9909ca78647a" />
+<img width="1325" height="475" alt="image" src="https://github.com/user-attachments/assets/b56d01a9-b39c-4f93-b9ea-b6aede4d91fd" />
+
 
 
 
