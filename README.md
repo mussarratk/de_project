@@ -24,6 +24,11 @@
 <img width="1309" height="431" alt="image" src="https://github.com/user-attachments/assets/2055df33-74ae-4590-9cb0-eb8418898baa" />
 <img width="1342" height="421" alt="image" src="https://github.com/user-attachments/assets/1a18d510-1817-4364-894d-b8f80196b4e1" />
 
+# Bronze Layer 
+
+<img width="1364" height="596" alt="image" src="https://github.com/user-attachments/assets/6915fb8a-d5b0-4311-b75e-c4063f10234c" />
+<img width="1291" height="453" alt="image" src="https://github.com/user-attachments/assets/0ada2898-234f-4d72-9360-d4105c0fcacc" />
+
 
 ## Pipeline - LDP - Fully Managed by Databricks
 - Use Autoloader - drag
