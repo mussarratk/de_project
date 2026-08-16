@@ -94,11 +94,14 @@ explore
 
 - ## Incremental Update
 
+<img width="560" height="433" alt="image" src="https://github.com/user-attachments/assets/a66101b3-94c3-4d93-bb5b-aae7439335b7" />
+
 <img width="1258" height="518" alt="image" src="https://github.com/user-attachments/assets/5e84879e-e27c-42d7-a5d7-726f95c967cd" />
 
 <img width="560" height="433" alt="image" src="https://github.com/user-attachments/assets/a66101b3-94c3-4d93-bb5b-aae7439335b7" />
 
-![Uploading image.png…]()
+<img width="1026" height="385" alt="image" src="https://github.com/user-attachments/assets/c3c3acbe-9c16-4e91-8bf8-de402e853807" />
+
 
 
 
