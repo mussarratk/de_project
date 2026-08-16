@@ -13,6 +13,9 @@
 - Gold Layer - OBT append - LDP  - Trips Table for joins add from dimension table
 - Star Schema - Dimensional Data Model - All facts and dims
 
+
+<img width="1303" height="634" alt="image" src="https://github.com/user-attachments/assets/f5484741-d324-4751-b2b9-0c0bb022680e" />
+
 # Project
   
 <img width="562" height="577" alt="image" src="https://github.com/user-attachments/assets/d18dc42e-9b10-44a6-b621-882d89844b94" />
@@ -31,14 +34,71 @@
 
 
 ## Pipeline - LDP - Fully Managed by Databricks
-- Use Autoloader - drag
+- Use Autoloader - drag everything
 - No Need Checkpoint Location and Schema Location - Auto done
 
 <img width="1325" height="517" alt="image" src="https://github.com/user-attachments/assets/cf9327f4-61d7-4546-ba78-9909ca78647a" />
 <img width="1325" height="475" alt="image" src="https://github.com/user-attachments/assets/b56d01a9-b39c-4f93-b9ea-b6aede4d91fd" />
 
+<img width="978" height="400" alt="image" src="https://github.com/user-attachments/assets/7143664f-a547-484b-a5cc-fa298c7e899d" />
+
+##
+explore
+<img width="900" height="574" alt="image" src="https://github.com/user-attachments/assets/426a8f62-2451-4962-8997-6a34330feb4d" />
 
 
+## Silver
+<img width="1314" height="586" alt="image" src="https://github.com/user-attachments/assets/9193f0b8-2636-458a-94c0-6972af56f30d" />
+<img width="1343" height="460" alt="image" src="https://github.com/user-attachments/assets/41beb9c8-fd72-40c4-b4ea-2540ee0abadb" />
+
+## OBT_Gold
+
+<img width="1300" height="590" alt="image" src="https://github.com/user-attachments/assets/049326a1-cbbd-4d7f-8c89-17a249f19447" />
+<img width="1313" height="625" alt="image" src="https://github.com/user-attachments/assets/8e816608-f441-44d5-bcd7-a5ad425e2fe6" />
+<img width="1333" height="441" alt="image" src="https://github.com/user-attachments/assets/201869b9-eb2f-4889-a177-d281c98fa7a0" />
+
+- exploration
+
+<img width="1009" height="452" alt="image" src="https://github.com/user-attachments/assets/3c595757-79a6-4a1e-b4eb-65c0c2b10c0c" />
+<img width="1262" height="216" alt="image" src="https://github.com/user-attachments/assets/15612231-2635-4f3e-85c0-c6f661c5feb0" />
+<img width="1296" height="550" alt="image" src="https://github.com/user-attachments/assets/02ec63ed-3cf9-43e0-99ee-efc4e93c4c0b" />
+
+
+- Stateful transformation like join with the streaming data (state is not persisted) apply this watermark in data - treat this data - process late arrival data 10 mins (come within 10 mins not process the data - Spark Structured Streaming handle all the data which is compatible) data depending on our need and do not keep this data in your state before that. 
+
+
+## Star Schema - SCD - DIM Stagging View - Dims tables
+- In stagging layer we decide what columns we need for our dims.py file as OBT has all (either can create view or table ) here incremental streaming view (recommended to create view - no need store the stagging) - It is only select no transformation
+  
+<img width="1361" height="575" alt="image" src="https://github.com/user-attachments/assets/0172942d-7e4a-4b1a-973b-634d07bd7d86" />
+
+<img width="1312" height="630" alt="image" src="https://github.com/user-attachments/assets/143dcfff-8635-4ba0-850e-6bd2a6cd3008" />
+
+
+- external context dim and added internal context fact table some dim columns
+  
+<img width="1349" height="574" alt="image" src="https://github.com/user-attachments/assets/07fdae3c-0703-471d-92df-81dfa5f9ade0" />
+
+<img width="1303" height="634" alt="image" src="https://github.com/user-attachments/assets/084dbaa8-ad98-40d9-95ea-a08e88ff55ec" />
+
+<img width="1292" height="575" alt="image" src="https://github.com/user-attachments/assets/37195605-aba4-4549-a014-060850a312ca" />
+
+## Fact Tables
+
+<img width="1307" height="594" alt="image" src="https://github.com/user-attachments/assets/56536b60-13cc-42cc-92b2-c039481632bf" />
+<img width="1247" height="536" alt="image" src="https://github.com/user-attachments/assets/1d6e0c5b-f087-46e7-b4a0-5a4a3c46d6d3" />
+
+- fetching the data used join fact n cust dim
+
+<img width="1252" height="582" alt="image" src="https://github.com/user-attachments/assets/cc1a747d-2fee-438d-8659-3800e083fd76" />
+
+- ## Incremental Update
+
+<img width="1258" height="518" alt="image" src="https://github.com/user-attachments/assets/5e84879e-e27c-42d7-a5d7-726f95c967cd" />
+
+<img width="560" height="433" alt="image" src="https://github.com/user-attachments/assets/a66101b3-94c3-4d93-bb5b-aae7439335b7" />
+
+![Uploading image.png…]()
 
 
 
