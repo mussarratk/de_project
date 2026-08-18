@@ -99,6 +99,8 @@ bronze_trips ──▶ silver_trips ──▶ gold_obt ──┬──▶ stg_di
                                               └──▶ stg_dim_trips     ──▶ fact_trips
 ```
 
+<img width="1303" height="634" alt="image" src="https://github.com/user-attachments/assets/f5484741-d324-4751-b2b9-0c0bb022680e" />
+
 ![Full pipeline DAG](docs/pipeline-dag-full.png)
 ![Pipeline run detail with upsert counts](docs/pipeline-run-detail.png)
 
@@ -149,48 +151,17 @@ A successful run shows each streaming dimension table reporting **"Upserted: N"*
 
 ---
 
-## 🎤 How I'd Explain This Project in an Interview
-
-**30-second summary:**
-> "I built an end-to-end medallion pipeline on Databricks for rideshare trip data using Lakeflow Declarative Pipelines. Raw events land in Bronze via Auto Loader, get validated and watermarked in Silver to handle late-arriving streaming data, get joined against dimension snapshots into an append-only Gold OBT, and finally get modeled into a star schema — with dimension tables built through `AUTO CDC` for automated SCD Type 2 history tracking, and a fact table holding the additive trip measures. Data quality is enforced declaratively at each layer with expectations, and the whole thing is monitored through the pipeline's built-in event log rather than custom logging code."
-
-**If asked "what was the hardest part / what did you learn most from":**
-> "Understanding watermarking conceptually was the trickiest part — grasping that it's not just a timeout, but a moving boundary computed from the *maximum event time seen so far minus a threshold*, and that anything with an event time before that boundary gets dropped from stateful processing. The other big shift was realizing how much boilerplate `AUTO CDC` eliminates — I first wrote SCD Type 2 by hand with a manual diff-join and two-step close/insert `MERGE`, and seeing that collapse into a ~10-line declarative flow really clarified *why* teams adopt these managed frameworks instead of hand-rolling pipeline logic."
-
-**If asked "how would you scale/productionize this further":**
-> "I'd tune the watermark threshold against real p95/p99 lateness metrics from ingestion logs rather than a guessed value, add Z-ordering/liquid clustering on the dimension merge keys since `AUTO CDC` performs a `MERGE` per micro-batch, route data-quality failures to a dead-letter `append_flow` sink instead of silently dropping them, and wire the persisted event log into a dashboard for proactive alerting beyond the built-in failure notifications."
-
----
-
-## 🚀 How to Run
-
-1. Clone this repo into a Databricks Workspace (Repos) or import the files directly.
-2. Create a new **Lakeflow Declarative Pipeline**, pointing its source code path at `transformations/`.
-3. Set pipeline parameters under **Settings → Configuration** (e.g. source paths, catalog/schema names, any connection strings — never hardcode secrets in code).
-4. Set the target **catalog/schema** (Unity Catalog) for the pipeline output.
-5. Run in **Development** mode first to validate the DAG and expectation results; switch to a scheduled **Job** task for production runs.
-6. (Optional) Enable **Event Log** persistence under pipeline settings for custom downstream monitoring/alerting.
-
----
-
-## 📎 Related Docs
-
-- [`legacy_vs_lakeflow_dlt_code_comparison.md`](./legacy_vs_lakeflow_dlt_code_comparison.md) — side-by-side comparison of hand-written `MERGE`/streaming code vs. the `AUTO CDC`/watermark/expectations approach used in this project.
-- [`rideshare_project_learning_guide.md`](./rideshare_project_learning_guide.md) — full concept breakdown, code examples, and interview Q&A derived from the course this project is based on.
-
----
-
 ## 🔭 Future Improvements
 
 - [ ] Add Kafka/Event Hub as a live streaming source instead of file-based Auto Loader ingestion
 - [ ] Add dead-letter `append_flow` sink for records failing data quality expectations
 - [ ] Add Z-ordering/liquid clustering on dimension merge keys for `AUTO CDC` performance at scale
 - [ ] Build a downstream alerting dashboard off the persisted pipeline event log
-- [ ] Add unit tests for transformation logic using `chispa`/`pytest`
 
 
 
 ---
+
 <details>
     
 
