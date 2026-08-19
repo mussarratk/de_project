@@ -1,4 +1,9 @@
-# de_project
+# Databricks de_project
+https://github.com/mussarratk/Databricks_Project
+https://github.com/mussarratk/up4_End-to-End-Retail-Databricks-Project
+https://github.com/mussarratk/data-e-203
+
+
 ## DP-750
 ---
 # 🚕 Rideshare Lakeflow Declarative Medallion Pipeline
